@@ -169,8 +169,8 @@
                 'class' : "wysihtml5-toolbar",
                 'style': "display:none"
             });
-            var culture = options.locale || defaultOptions.locale || "en";
-            for(var key in defaultOptions) {
+            var culture = options.locale || "en";
+            for(var key in options) {
                 var value = false;
 
                 if(options[key] !== undefined) {
@@ -178,7 +178,7 @@
                         value = true;
                     }
                 } else {
-                    value = defaultOptions[key];
+                    value = options[key];
                 }
 
                 if(value === true) {
